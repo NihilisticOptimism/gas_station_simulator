@@ -60,5 +60,7 @@ public class Config {
     public int getRandomSeed() {
         return randomSeed;
     }
-
+    
+    public int getDelayTime() {
+        return delayTime;
 }
