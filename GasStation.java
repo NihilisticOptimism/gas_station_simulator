@@ -64,7 +64,7 @@ public class GasStation {
 
         while (q.size() > 0 && pumpIndx != null) {
             Car car = q.poll();
-            Event result = serviceCar(car, pumpIndx, time);
+            Event result = serviceCar(car, pumpIndx, time, conf);
             if (result != null)
                 events.add(result);
             pumpIndx = findFreePumpIndx();
