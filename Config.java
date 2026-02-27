@@ -63,4 +63,5 @@ public class Config {
     
     public int getDelayTime() {
         return delayTime;
+    }
 }
