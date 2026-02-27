@@ -14,7 +14,7 @@ public class Car {
         arrivalTime = get_arrivalTime;
         
         tankCapacity = 10 * (4 + random.nextInt(5));
-        fuelLevel = (10 + random.nextInt(91)) / 100.0 * tankCapacity;
+        fuelLevel = (10 + random.nextInt(81)) / 100.0 * tankCapacity;
         desiredFuel = 4 + random.nextFloat() * (tankCapacity - fuelLevel - 4);
     }
 
