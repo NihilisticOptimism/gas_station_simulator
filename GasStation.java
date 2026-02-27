@@ -18,14 +18,15 @@ public class GasStation {
         return null;
     }
 
-    Event serviceCar(Car car, Integer pumpIndx, long time) {
+    Event serviceCar(Car car, Integer pumpIndx, long time, Config conf) {
         if (car != null && fuelReserve >= car.getDesiredFuel() && pumpIndx != null) {
             FuelPump pump = pumps.get(pumpIndx);
             pump.setBusy(true);
             pump.setCurrentCar(car);
             car.setStartServiceTime(time);
             long serviceTime = pump.getServiceTime();
-            car.setEndServiceTime(time + serviceTime);
+            int delayTime = conf.getDelayTime();
+            car.setEndServiceTime(time + serviceTime + delayTime);
             fuelReserve -= car.getDesiredFuel();
 
             pump.addWorkTime(serviceTime);
