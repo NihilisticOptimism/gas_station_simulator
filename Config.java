@@ -11,6 +11,7 @@ public class Config {
     int deliveryVolume = 10000;
     int deliveryDuration = 30;
     int randomSeed = 42; // 0.72
+    int delayTime = 5000;
 
     public int getSimulationDays() {
         return simulationDays;
